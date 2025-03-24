@@ -18,10 +18,23 @@ struct Position {
 Maze maze;
 int num_rows;
 int num_cols;
+
+int matrix[
 std::stack<Position> valid_positions;
 
 // Função para carregar o labirinto de um arquivo
 Position load_maze(const std::string& file_name) {
+    std::ifstream ifs;
+
+    ifs.open("maze.txt", std::ifstream::in)
+        
+    char c = ifs.get();
+    while (ifs.good()){
+        std::cout << c;
+        c = ifs.get();
+    }
+
+    ifs.close();
     // TODO: Implemente esta função seguindo estes passos:
     // 1. Abra o arquivo especificado por file_name usando std::ifstream
     // 2. Leia o número de linhas e colunas do labirinto
